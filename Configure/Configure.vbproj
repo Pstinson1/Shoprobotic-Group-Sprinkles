@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F2D3F24-5D52-45E1-A846-69C497F461F0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Configure.My.MyApplication</StartupObject>
+    <RootNamespace>Configure</RootNamespace>
+    <AssemblyName>Configure</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ManifestCertificateThumbprint>4B016D52AEFF232C46CC1453EE1E8FBA67827010</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Configure_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <ApplicationIcon>Resources\ShopRobotic.ico</ApplicationIcon>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <TargetFrameworkProfile />
+    <PublishUrl>c:\testConfig\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>None</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Build\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DebugWindow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DebugWindow\bin\Release\DebugWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="cDinkeyDongle.vb" />
+    <Compile Include="cReceiptPrinter.vb" />
+    <Compile Include="dris.vb" />
+    <Compile Include="fMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMain.Designer.vb">
+      <DependentUpon>fMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="fTestVend.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uPosition.Designer.vb">
+      <DependentUpon>uPosition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uPosition.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uProduct.Designer.vb">
+      <DependentUpon>uProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uProduct.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uProductExplorer.Designer.vb">
+      <DependentUpon>uProductExplorer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uProductExplorer.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uSplashScreen.Designer.vb">
+      <DependentUpon>uSplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uSplashScreen.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="fMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>fMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTestVend.resx">
+      <DependentUpon>fTestVend.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uPosition.resx">
+      <DependentUpon>uPosition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uProduct.resx">
+      <DependentUpon>uProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uProductExplorer.resx">
+      <DependentUpon>uProductExplorer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uSplashScreen.resx">
+      <DependentUpon>uSplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SHR_logo.jpg" />
+    <None Include="Resources\Knob Cancel.png" />
+    <None Include="Resources\Knob Valid Green.png" />
+    <None Include="Resources\Knob Valid Blue.png" />
+    <None Include="Resources\Splash.bmp" />
+    <None Include="Resources\Knob Remove.png" />
+    <None Include="Resources\Knob Add.png" />
+    <None Include="Resources\DownLarge.png" />
+    <None Include="Resources\DownMedium.png" />
+    <None Include="Resources\RightLarge.png" />
+    <None Include="Resources\RightMedium.png" />
+    <None Include="Resources\RightSmall.png" />
+    <None Include="Resources\LeftLarge.png" />
+    <None Include="Resources\LeftMedium.png" />
+    <None Include="Resources\LeftSmall.png" />
+    <None Include="Resources\UpLarge.png" />
+    <None Include="Resources\UpMedium.png" />
+    <None Include="Resources\UpSmall.png" />
+    <None Include="Resources\DownSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AttractManager\AttractManager.vbproj">
+      <Project>{1F955FB5-E014-429F-866D-21ADB9CB9264}</Project>
+      <Name>AttractManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eport\Eport.vbproj">
+      <Project>{427C6410-730E-4F4F-A494-78B40F617192}</Project>
+      <Name>Eport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FridgeManager\FridgeManager.vbproj">
+      <Project>{1836291C-B445-42A4-A828-288B86C0B855}</Project>
+      <Name>FridgeManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HelperFunctions\HelperFunctions.vbproj">
+      <Project>{B974594A-6326-43BE-B952-84123941E6BF}</Project>
+      <Name>HelperFunctions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MdbManager\MdbManager.vbproj">
+      <Project>{A0C0B09B-A45F-46C6-A87B-6492E2708EB7}</Project>
+      <Name>MdbManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MechInterface\MechInterface.vbproj">
+      <Project>{BB6DB0DD-866B-4D4A-A23B-7DDC82736FCF}</Project>
+      <Name>MechInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SerialManager\SerialManager.vbproj">
+      <Project>{11CD1878-4EEB-4F0E-B647-52D4C9E8B528}</Project>
+      <Name>SerialManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SettingsManager\SettingsManager.vbproj">
+      <Project>{5627DAFE-4491-4831-8CEF-C7AA8B7FD5FA}</Project>
+      <Name>SettingsManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VideoManager\VideoManager.vbproj">
+      <Project>{D8DF68AB-33FF-4597-B3C9-B0D025382490}</Project>
+      <Name>VideoManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YesPay\YesPay.vbproj">
+      <Project>{682E8701-4D2E-435F-A7A0-C67784AD7D29}</Project>
+      <Name>YesPay</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\NoValidImage.bmp" />
+    <Content Include="Resources\ShopRobotic.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" "C:\Program Files\Eazfuscator.NET\Eazfuscator.NET.exe" "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" -n --newline-flush</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,243 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Vend", "Flash\Vend.vbproj", "{D0E388FB-CCF8-4DB8-94D8-EE28B70AEB6C}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Eport", "Eport\Eport.vbproj", "{427C6410-730E-4F4F-A494-78B40F617192}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DebugWindow", "DebugWindow\DebugWindow.vbproj", "{FFEDC846-BECD-4700-9B69-B064A77493F2}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Configure", "Configure\Configure.vbproj", "{2F2D3F24-5D52-45E1-A846-69C497F461F0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FFEDC846-BECD-4700-9B69-B064A77493F2} = {FFEDC846-BECD-4700-9B69-B064A77493F2}
+		{5627DAFE-4491-4831-8CEF-C7AA8B7FD5FA} = {5627DAFE-4491-4831-8CEF-C7AA8B7FD5FA}
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "YesPay", "YesPay\YesPay.vbproj", "{682E8701-4D2E-435F-A7A0-C67784AD7D29}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HIDLibrary", "HIDLibrary\HIDLibrary.vbproj", "{E619EB3B-FA9E-43DE-8555-244E20C28E96}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "shell", "ShellLauncher\shell.vbproj", "{80BE5A90-A7C6-4B8A-A441-35AECB41BB5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectShowLib-2005", "DirectShowLib\DirectShowLib-2005.csproj", "{66922AA7-384E-4C75-9F7B-7C558A90E8F8}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FridgeManager", "FridgeManager\FridgeManager.vbproj", "{1836291C-B445-42A4-A828-288B86C0B855}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VideoManager", "VideoManager\VideoManager.vbproj", "{D8DF68AB-33FF-4597-B3C9-B0D025382490}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SettingsManager", "SettingsManager\SettingsManager.vbproj", "{5627DAFE-4491-4831-8CEF-C7AA8B7FD5FA}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SerialManager", "SerialManager\SerialManager.vbproj", "{11CD1878-4EEB-4F0E-B647-52D4C9E8B528}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MechanicalTest", "MechanicalTest\MechanicalTest.vbproj", "{3165EC11-5A10-4AC9-95BE-707327F5CDF4}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MechInterface", "MechInterface\MechInterface.vbproj", "{BB6DB0DD-866B-4D4A-A23B-7DDC82736FCF}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HelperFunctions", "HelperFunctions\HelperFunctions.vbproj", "{B974594A-6326-43BE-B952-84123941E6BF}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MdbManager", "MdbManager\MdbManager.vbproj", "{A0C0B09B-A45F-46C6-A87B-6492E2708EB7}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AttractManager", "AttractManager\AttractManager.vbproj", "{1F955FB5-E014-429F-866D-21ADB9CB9264}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AccessPayment", "AccessPayment\AccessPayment.vbproj", "{FA43ECE8-6155-4996-A09A-F1ABE6514A49}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Layout", "Layout\Layout.vbproj", "{CE787DBB-923C-4BA0-8580-904557701C0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{6BCEDF5F-AFDE-4807-B5BD-18FC17C23F5C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Create Scripts", "Create Scripts", "{6502E7E0-69CD-43C4-BB64-00E2CBA6A03E}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\Create\1.dbo.ProductCategories.Table.sql = SQL\Create\1.dbo.ProductCategories.Table.sql
+		SQL\Create\dbo.activateProduct.StoredProcedure.sql = SQL\Create\dbo.activateProduct.StoredProcedure.sql
+		SQL\Create\dbo.chkPositionIsOrphan.StoredProcedure.sql = SQL\Create\dbo.chkPositionIsOrphan.StoredProcedure.sql
+		SQL\Create\dbo.deactivatePosition.StoredProcedure.sql = SQL\Create\dbo.deactivatePosition.StoredProcedure.sql
+		SQL\Create\dbo.deActivateProduct.StoredProcedure.sql = SQL\Create\dbo.deActivateProduct.StoredProcedure.sql
+		SQL\Create\dbo.deletePosition.StoredProcedure.sql = SQL\Create\dbo.deletePosition.StoredProcedure.sql
+		SQL\Create\dbo.EportTransaction.Table.sql = SQL\Create\dbo.EportTransaction.Table.sql
+		SQL\Create\dbo.FridgeTemperature.Table.sql = SQL\Create\dbo.FridgeTemperature.Table.sql
+		SQL\Create\dbo.GetActiveProducts.StoredProcedure.sql = SQL\Create\dbo.GetActiveProducts.StoredProcedure.sql
+		SQL\Create\dbo.GetAllProducts.StoredProcedure.sql = SQL\Create\dbo.GetAllProducts.StoredProcedure.sql
+		SQL\Create\dbo.GetCategories.StoredProcedure.sql = SQL\Create\dbo.GetCategories.StoredProcedure.sql
+		SQL\Create\dbo.getPositions.StoredProcedure.sql = SQL\Create\dbo.getPositions.StoredProcedure.sql
+		SQL\Create\dbo.getPositionsForProduct.StoredProcedure.sql = SQL\Create\dbo.getPositionsForProduct.StoredProcedure.sql
+		SQL\Create\dbo.getPositionTotal.StoredProcedure.sql = SQL\Create\dbo.getPositionTotal.StoredProcedure.sql
+		SQL\Create\dbo.getProductCountTotal.StoredProcedure.sql = SQL\Create\dbo.getProductCountTotal.StoredProcedure.sql
+		SQL\Create\dbo.getReceiptDetails.StoredProcedure.sql = SQL\Create\dbo.getReceiptDetails.StoredProcedure.sql
+		SQL\Create\dbo.insertPosition.StoredProcedure.sql = SQL\Create\dbo.insertPosition.StoredProcedure.sql
+		SQL\Create\dbo.LightingChannelIndex.Table.sql = SQL\Create\dbo.LightingChannelIndex.Table.sql
+		SQL\Create\dbo.MachineInfo.Table.sql = SQL\Create\dbo.MachineInfo.Table.sql
+		SQL\Create\dbo.makeAdjustment.StoredProcedure.sql = SQL\Create\dbo.makeAdjustment.StoredProcedure.sql
+		SQL\Create\dbo.markNextToVend.StoredProcedure.sql = SQL\Create\dbo.markNextToVend.StoredProcedure.sql
+		SQL\Create\dbo.MdbCardTransaction.Table.sql = SQL\Create\dbo.MdbCardTransaction.Table.sql
+		SQL\Create\dbo.Metrics.Table.sql = SQL\Create\dbo.Metrics.Table.sql
+		SQL\Create\dbo.PaymentMethods.Table.sql = SQL\Create\dbo.PaymentMethods.Table.sql
+		SQL\Create\dbo.Product.Table.sql = SQL\Create\dbo.Product.Table.sql
+		SQL\Create\dbo.ProductPosition.Table.sql = SQL\Create\dbo.ProductPosition.Table.sql
+		SQL\Create\dbo.qryAllProducts.StoredProcedure.sql = SQL\Create\dbo.qryAllProducts.StoredProcedure.sql
+		SQL\Create\dbo.ReceivedItem.Table.sql = SQL\Create\dbo.ReceivedItem.Table.sql
+		SQL\Create\dbo.ReceivedLayoutIem.Table.sql = SQL\Create\dbo.ReceivedLayoutIem.Table.sql
+		SQL\Create\dbo.ReceivedProductCategories.Table.sql = SQL\Create\dbo.ReceivedProductCategories.Table.sql
+		SQL\Create\dbo.SalesReporting.Table.sql = SQL\Create\dbo.SalesReporting.Table.sql
+		SQL\Create\dbo.SaveSalesOrder.StoredProcedure.sql = SQL\Create\dbo.SaveSalesOrder.StoredProcedure.sql
+		SQL\Create\dbo.Settings.Table.sql = SQL\Create\dbo.Settings.Table.sql
+		SQL\Create\dbo.spAddTransactionID.StoredProcedure.sql = SQL\Create\dbo.spAddTransactionID.StoredProcedure.sql
+		SQL\Create\dbo.spCheckUserCredentials.StoredProcedure.sql = SQL\Create\dbo.spCheckUserCredentials.StoredProcedure.sql
+		SQL\Create\dbo.spDeleteDownloadedData.StoredProcedure.sql = SQL\Create\dbo.spDeleteDownloadedData.StoredProcedure.sql
+		SQL\Create\dbo.spGetAllUsers.StoredProcedure.sql = SQL\Create\dbo.spGetAllUsers.StoredProcedure.sql
+		SQL\Create\dbo.spGetInventory.StoredProcedure.sql = SQL\Create\dbo.spGetInventory.StoredProcedure.sql
+		SQL\Create\dbo.spGetLayoutProducts.StoredProcedure.sql = SQL\Create\dbo.spGetLayoutProducts.StoredProcedure.sql
+		SQL\Create\dbo.spGetSalesReporting.StoredProcedure.sql = SQL\Create\dbo.spGetSalesReporting.StoredProcedure.sql
+		SQL\Create\dbo.spLookForNewLayout.StoredProcedure.sql = SQL\Create\dbo.spLookForNewLayout.StoredProcedure.sql
+		SQL\Create\dbo.spMarkSalesUploadComplete.StoredProcedure.sql = SQL\Create\dbo.spMarkSalesUploadComplete.StoredProcedure.sql
+		SQL\Create\dbo.spReceiveCategory.StoredProcedure.sql = SQL\Create\dbo.spReceiveCategory.StoredProcedure.sql
+		SQL\Create\dbo.spReceiveItem.StoredProcedure.sql = SQL\Create\dbo.spReceiveItem.StoredProcedure.sql
+		SQL\Create\dbo.spReceiveLayoutItem.StoredProcedure.sql = SQL\Create\dbo.spReceiveLayoutItem.StoredProcedure.sql
+		SQL\Create\dbo.spRecordSale.StoredProcedure.sql = SQL\Create\dbo.spRecordSale.StoredProcedure.sql
+		SQL\Create\dbo.spSetNewData.StoredProcedure.sql = SQL\Create\dbo.spSetNewData.StoredProcedure.sql
+		SQL\Create\dbo.spUpdateLayout.StoredProcedure.sql = SQL\Create\dbo.spUpdateLayout.StoredProcedure.sql
+		SQL\Create\dbo.spUpdateStock.StoredProcedure.sql = SQL\Create\dbo.spUpdateStock.StoredProcedure.sql
+		SQL\Create\dbo.StockAdjustments.Table.sql = SQL\Create\dbo.StockAdjustments.Table.sql
+		SQL\Create\dbo.TekStatsService.Table.sql = SQL\Create\dbo.TekStatsService.Table.sql
+		SQL\Create\dbo.updatePosition.StoredProcedure.sql = SQL\Create\dbo.updatePosition.StoredProcedure.sql
+		SQL\Create\dbo.updateProdPrice.StoredProcedure.sql = SQL\Create\dbo.updateProdPrice.StoredProcedure.sql
+		SQL\Create\dbo.updateRestockLevel.StoredProcedure.sql = SQL\Create\dbo.updateRestockLevel.StoredProcedure.sql
+		SQL\Create\dbo.UserAccess.Table.sql = SQL\Create\dbo.UserAccess.Table.sql
+		SQL\Create\dbo.Users.Table.sql = SQL\Create\dbo.Users.Table.sql
+		SQL\Create\dbo.VmcSettings.Table.sql = SQL\Create\dbo.VmcSettings.Table.sql
+		SQL\Create\DF_EportTransaction_Date.Default.sql = SQL\Create\DF_EportTransaction_Date.Default.sql
+		SQL\Create\DF_Users_FobNumber.Default.sql = SQL\Create\DF_Users_FobNumber.Default.sql
+		SQL\Create\DF_Users_Name.Default.sql = SQL\Create\DF_Users_Name.Default.sql
+		SQL\Create\DF_Users_Passcode.Default.sql = SQL\Create\DF_Users_Passcode.Default.sql
+		SQL\Create\z1.dbo.Orders.Table.sql = SQL\Create\z1.dbo.Orders.Table.sql
+		SQL\Create\z2.dbo.OrderItems.Table.sql = SQL\Create\z2.dbo.OrderItems.Table.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{1815B553-154F-42AA-BDD3-355C811D9F65}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\Settings\dbo.LightingChannelIndex.Table.sql = SQL\Settings\dbo.LightingChannelIndex.Table.sql
+		SQL\Settings\dbo.Metrics.Table.sql = SQL\Settings\dbo.Metrics.Table.sql
+		SQL\Settings\dbo.PaymentMethods.Table.sql = SQL\Settings\dbo.PaymentMethods.Table.sql
+		SQL\Settings\dbo.Settings.Table.sql = SQL\Settings\dbo.Settings.Table.sql
+		SQL\Settings\dbo.UserAccess.Table.sql = SQL\Settings\dbo.UserAccess.Table.sql
+		SQL\Settings\dbo.Users.Table.sql = SQL\Settings\dbo.Users.Table.sql
+		SQL\Settings\dbo.VmcSettings.Table.sql = SQL\Settings\dbo.VmcSettings.Table.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestData", "TestData", "{F2CE878F-F988-41FB-A214-9A3A454D66A5}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\Test Data\1.dbo.ProductCategories.Table.sql = SQL\Test Data\1.dbo.ProductCategories.Table.sql
+		SQL\Test Data\2.dbo.Product.Table.sql = SQL\Test Data\2.dbo.Product.Table.sql
+		SQL\Test Data\dbo.EportTransaction.Table.sql = SQL\Test Data\dbo.EportTransaction.Table.sql
+		SQL\Test Data\dbo.FridgeTemperature.Table.sql = SQL\Test Data\dbo.FridgeTemperature.Table.sql
+		SQL\Test Data\dbo.MachineInfo.Table.sql = SQL\Test Data\dbo.MachineInfo.Table.sql
+		SQL\Test Data\dbo.MdbCardTransaction.Table.sql = SQL\Test Data\dbo.MdbCardTransaction.Table.sql
+		SQL\Test Data\dbo.OrderItems.Table.sql = SQL\Test Data\dbo.OrderItems.Table.sql
+		SQL\Test Data\dbo.Orders.Table.sql = SQL\Test Data\dbo.Orders.Table.sql
+		SQL\Test Data\dbo.ProductPosition.Table.sql = SQL\Test Data\dbo.ProductPosition.Table.sql
+		SQL\Test Data\dbo.ReceivedItem.Table.sql = SQL\Test Data\dbo.ReceivedItem.Table.sql
+		SQL\Test Data\dbo.ReceivedLayoutIem.Table.sql = SQL\Test Data\dbo.ReceivedLayoutIem.Table.sql
+		SQL\Test Data\dbo.ReceivedProductCategories.Table.sql = SQL\Test Data\dbo.ReceivedProductCategories.Table.sql
+		SQL\Test Data\dbo.SalesReporting.Table.sql = SQL\Test Data\dbo.SalesReporting.Table.sql
+		SQL\Test Data\dbo.StockAdjustments.Table.sql = SQL\Test Data\dbo.StockAdjustments.Table.sql
+		SQL\Test Data\dbo.TekStatsService.Table.sql = SQL\Test Data\dbo.TekStatsService.Table.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Alters", "Alters", "{2E0FD931-6882-4895-B08C-1D1A56579A86}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0E388FB-CCF8-4DB8-94D8-EE28B70AEB6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E388FB-CCF8-4DB8-94D8-EE28B70AEB6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E388FB-CCF8-4DB8-94D8-EE28B70AEB6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E388FB-CCF8-4DB8-94D8-EE28B70AEB6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{427C6410-730E-4F4F-A494-78B40F617192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{427C6410-730E-4F4F-A494-78B40F617192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{427C6410-730E-4F4F-A494-78B40F617192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{427C6410-730E-4F4F-A494-78B40F617192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFEDC846-BECD-4700-9B69-B064A77493F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFEDC846-BECD-4700-9B69-B064A77493F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFEDC846-BECD-4700-9B69-B064A77493F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFEDC846-BECD-4700-9B69-B064A77493F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F2D3F24-5D52-45E1-A846-69C497F461F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2D3F24-5D52-45E1-A846-69C497F461F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2D3F24-5D52-45E1-A846-69C497F461F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2D3F24-5D52-45E1-A846-69C497F461F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{682E8701-4D2E-435F-A7A0-C67784AD7D29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{682E8701-4D2E-435F-A7A0-C67784AD7D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{682E8701-4D2E-435F-A7A0-C67784AD7D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{682E8701-4D2E-435F-A7A0-C67784AD7D29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E619EB3B-FA9E-43DE-8555-244E20C28E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E619EB3B-FA9E-43DE-8555-244E20C28E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E619EB3B-FA9E-43DE-8555-244E20C28E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E619EB3B-FA9E-43DE-8555-244E20C28E96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80BE5A90-A7C6-4B8A-A441-35AECB41BB5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80BE5A90-A7C6-4B8A-A441-35AECB41BB5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80BE5A90-A7C6-4B8A-A441-35AECB41BB5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80BE5A90-A7C6-4B8A-A441-35AECB41BB5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66922AA7-384E-4C75-9F7B-7C558A90E8F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66922AA7-384E-4C75-9F7B-7C558A90E8F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66922AA7-384E-4C75-9F7B-7C558A90E8F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66922AA7-384E-4C75-9F7B-7C558A90E8F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1836291C-B445-42A4-A828-288B86C0B855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1836291C-B445-42A4-A828-288B86C0B855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1836291C-B445-42A4-A828-288B86C0B855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1836291C-B445-42A4-A828-288B86C0B855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8DF68AB-33FF-4597-B3C9-B0D025382490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8DF68AB-33FF-4597-B3C9-B0D025382490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8DF68AB-33FF-4597-B3C9-B0D025382490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8DF68AB-33FF-4597-B3C9-B0D025382490}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5627DAFE-4491-4831-8CEF-C7AA8B7FD5FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5627DAFE-4491-4831-8CEF-C7AA8B7FD5FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5627DAFE-4491-4831-8CEF-C7AA8B7FD5FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5627DAFE-4491-4831-8CEF-C7AA8B7FD5FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11CD1878-4EEB-4F0E-B647-52D4C9E8B528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11CD1878-4EEB-4F0E-B647-52D4C9E8B528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11CD1878-4EEB-4F0E-B647-52D4C9E8B528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11CD1878-4EEB-4F0E-B647-52D4C9E8B528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3165EC11-5A10-4AC9-95BE-707327F5CDF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3165EC11-5A10-4AC9-95BE-707327F5CDF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3165EC11-5A10-4AC9-95BE-707327F5CDF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3165EC11-5A10-4AC9-95BE-707327F5CDF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB6DB0DD-866B-4D4A-A23B-7DDC82736FCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB6DB0DD-866B-4D4A-A23B-7DDC82736FCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB6DB0DD-866B-4D4A-A23B-7DDC82736FCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB6DB0DD-866B-4D4A-A23B-7DDC82736FCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B974594A-6326-43BE-B952-84123941E6BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B974594A-6326-43BE-B952-84123941E6BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B974594A-6326-43BE-B952-84123941E6BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B974594A-6326-43BE-B952-84123941E6BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0C0B09B-A45F-46C6-A87B-6492E2708EB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0C0B09B-A45F-46C6-A87B-6492E2708EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0C0B09B-A45F-46C6-A87B-6492E2708EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0C0B09B-A45F-46C6-A87B-6492E2708EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F955FB5-E014-429F-866D-21ADB9CB9264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F955FB5-E014-429F-866D-21ADB9CB9264}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F955FB5-E014-429F-866D-21ADB9CB9264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F955FB5-E014-429F-866D-21ADB9CB9264}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA43ECE8-6155-4996-A09A-F1ABE6514A49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA43ECE8-6155-4996-A09A-F1ABE6514A49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA43ECE8-6155-4996-A09A-F1ABE6514A49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA43ECE8-6155-4996-A09A-F1ABE6514A49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE787DBB-923C-4BA0-8580-904557701C0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE787DBB-923C-4BA0-8580-904557701C0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE787DBB-923C-4BA0-8580-904557701C0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE787DBB-923C-4BA0-8580-904557701C0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6502E7E0-69CD-43C4-BB64-00E2CBA6A03E} = {6BCEDF5F-AFDE-4807-B5BD-18FC17C23F5C}
+		{1815B553-154F-42AA-BDD3-355C811D9F65} = {6BCEDF5F-AFDE-4807-B5BD-18FC17C23F5C}
+		{F2CE878F-F988-41FB-A214-9A3A454D66A5} = {6BCEDF5F-AFDE-4807-B5BD-18FC17C23F5C}
+		{2E0FD931-6882-4895-B08C-1D1A56579A86} = {6BCEDF5F-AFDE-4807-B5BD-18FC17C23F5C}
+	EndGlobalSection
+EndGlobal

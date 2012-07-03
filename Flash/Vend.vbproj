@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D0E388FB-CCF8-4DB8-94D8-EE28B70AEB6C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Vend.My.MyApplication</StartupObject>
+    <RootNamespace>Vend</RootNamespace>
+    <AssemblyName>Vend</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ApplicationIcon>ShopRobotic.ico</ApplicationIcon>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/Vend/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>None</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Build\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <DebugSymbols>false</DebugSymbols>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Build\Release\AxInterop.ShockwaveFlashObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="cDatabaseManager.vb" />
+    <Compile Include="cDinkeyDongle.vb" />
+    <Compile Include="cSalesReporting.vb" />
+    <Compile Include="cUserList.vb" />
+    <Compile Include="dris.vb" />
+    <Compile Include="ExternalInterfaceCall.vb" />
+    <Compile Include="ExternalInterfaceCallEventArgs.vb" />
+    <Compile Include="ExternalInterfaceProxy.vb" />
+    <Compile Include="ExternalInterfaceSerializer.vb" />
+    <Compile Include="fLockMech.Designer.vb">
+      <DependentUpon>fLockMech.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fLockMech.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMain.Designer.vb">
+      <DependentUpon>fMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mHook.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="cReceiptPrinter.vb" />
+    <Compile Include="mShellReady.vb" />
+    <Compile Include="RemoteControl.Designer.vb">
+      <DependentUpon>RemoteControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RemoteControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="fLockMech.resx">
+      <DependentUpon>fLockMech.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>fMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cReceiptPrinter.resx">
+      <DependentUpon>cReceiptPrinter.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoteControl.resx">
+      <DependentUpon>RemoteControl.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Printer\header.bmp" />
+    <Content Include="refDll\AxInterop.ComctlLib.dll" />
+    <Content Include="refDll\AxInterop.MSComctlLib.dll" />
+    <Content Include="refDll\AxInterop.MSWinsockLib.dll" />
+    <Content Include="refDll\AxInterop.SHDocVw.dll" />
+    <Content Include="refDll\AxInterop.ShockwaveFlashObjects.dll" />
+    <Content Include="refDll\Interop.ComctlLib.dll" />
+    <Content Include="refDll\Interop.MSComctlLib.dll" />
+    <Content Include="refDll\Interop.MSWinsockLib.dll" />
+    <Content Include="refDll\Interop.SHDocVw.dll" />
+    <Content Include="refDll\Interop.ShockwaveFlashObjects.dll" />
+    <Content Include="refDll\Ras.dll" />
+    <Content Include="refDll\sax.communications.community.dll" />
+    <None Include="My Project\app.manifest" />
+    <Content Include="ShopRobotic.ico" />
+    <Content Include="TEK_mondianUI_4.2.swf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wdtdll.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccessPayment\AccessPayment.vbproj">
+      <Project>{FA43ECE8-6155-4996-A09A-F1ABE6514A49}</Project>
+      <Name>AccessPayment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AttractManager\AttractManager.vbproj">
+      <Project>{1F955FB5-E014-429F-866D-21ADB9CB9264}</Project>
+      <Name>AttractManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DebugWindow\DebugWindow.vbproj">
+      <Project>{FFEDC846-BECD-4700-9B69-B064A77493F2}</Project>
+      <Name>DebugWindow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eport\Eport.vbproj">
+      <Project>{427C6410-730E-4F4F-A494-78B40F617192}</Project>
+      <Name>Eport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HelperFunctions\HelperFunctions.vbproj">
+      <Project>{B974594A-6326-43BE-B952-84123941E6BF}</Project>
+      <Name>HelperFunctions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MdbManager\MdbManager.vbproj">
+      <Project>{A0C0B09B-A45F-46C6-A87B-6492E2708EB7}</Project>
+      <Name>MdbManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MechInterface\MechInterface.vbproj">
+      <Project>{BB6DB0DD-866B-4D4A-A23B-7DDC82736FCF}</Project>
+      <Name>MechInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SerialManager\SerialManager.vbproj">
+      <Project>{11CD1878-4EEB-4F0E-B647-52D4C9E8B528}</Project>
+      <Name>SerialManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SettingsManager\SettingsManager.vbproj">
+      <Project>{5627DAFE-4491-4831-8CEF-C7AA8B7FD5FA}</Project>
+      <Name>SettingsManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VideoManager\VideoManager.vbproj">
+      <Project>{D8DF68AB-33FF-4597-B3C9-B0D025382490}</Project>
+      <Name>VideoManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YesPay\YesPay.vbproj">
+      <Project>{682E8701-4D2E-435F-A7A0-C67784AD7D29}</Project>
+      <Name>YesPay</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" "C:\Program Files\Eazfuscator.NET\Eazfuscator.NET.exe" "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" -n --newline-flush</PostBuildEvent>
+  </PropertyGroup>
+</Project>
