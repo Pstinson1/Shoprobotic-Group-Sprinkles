@@ -24,13 +24,14 @@ Public Class cDatabaseManager
         XML_HARVEYNICHOLS = 3
         XML_CALVINKLEIN = 4
         XML_SPRINKLES = 5
+        XML_EYECANDY = 6
     End Enum
 
     ' structures
     Public Structure ProductStructure
 
         ' default, transmit this with all databases
-        Dim productId As Integer
+        Dim productId As Long
         Dim authourisationPrice As Integer
         Dim displayPrice As Decimal
         Dim fullPrice As Decimal
@@ -71,6 +72,15 @@ Public Class cDatabaseManager
 
         Dim productColour As String
         Dim productSize As String
+
+        ' eye candy
+
+        Dim polar As String
+        Dim brand As String
+        Dim shape As String
+        Dim gender As String
+        Dim vto As String
+        Dim style As String
 
     End Structure
 
@@ -541,6 +551,16 @@ Public Class cDatabaseManager
                                                        "                      ProductCategories AS pc ON p.ProdCatId = pc.ProdCatId INNER JOIN " & _
                                                        "                      ProductPosition ON p.ProdId = ProductPosition.ProdId " & _
                                                        " WHERE     (ProductPosition.IsActive = 1) AND (ProductPosition.ItemsInStock > 0) and p.IsActive = 'true' order by pc.prodcatid,p.SortRank"
+            Case XmlRequirementStruct.XML_EYECANDY
+                productListCommand = "      SELECT DISTINCT  " & _
+                                                       "                    p.ProdId, p.ItemId, p.ProdName AS 'name', ISNULL(p.PreName, '') AS 'preName', " & _
+                                                       "                    ISNULL(CAST(ROUND(p.ProdPrice, 2) AS Dec(10, 2)), '-1') AS ProdPrice, p.ProdDesc AS 'desc', p.ProdImgUrl1 AS 'url', ISNULL(p.ProdImgUrl2, '') " & _
+                                                       "                    AS 'url2', ISNULL(p.ProdImgUrl3, '') AS 'url3', ISNULL(p.ProdImgUrl4, 'images/blank.jpg') AS 'url4', pc.ProdCatName AS 'ProdCatId', ISNULL(p.xPos, 0) " & _
+                                                       "                    AS 'xPos', ISNULL(p.yPos, 0) AS 'yPos', ISNULL(p.Polarised,'N') AS 'Polarised', ISNULL(p.Brand,'') AS 'Brand', ISNULL(p.Shape,'') AS 'Shape', ISNULL(p.Gender,'U') AS 'Gender', ISNULL(p.VTO,'') AS 'VTO', ISNULL(p.Style,'') AS 'Style'  " & _
+                                                       " FROM         Product AS p INNER JOIN " & _
+                                                       "              ProductCategories AS pc ON p.ProdCatId = pc.ProdCatId INNER JOIN " & _
+                                                        "             ProductPosition ON p.ProdId = ProductPosition.ProdId " & _
+                                                        " WHERE     (ProductPosition.IsActive = 1) AND (ProductPosition.ItemsInStock > 0) and p.IsActive = 'true'"
 
         End Select
 
@@ -587,8 +607,8 @@ Public Class cDatabaseManager
                                 currentItemsCategory = productList("ProdCatId")
                                 productCategoryImage = productList("ProdCatImage")
                                 productCategoryColour = productList("ProdCatColour")
-                            
-
+                            Case XmlRequirementStruct.XML_EYECANDY
+                                currentItemsCategory = productList("ProdCatId")
 
                         End Select
 
@@ -623,6 +643,8 @@ Public Class cDatabaseManager
                                     xmlWriter.WriteAttributeString("ProdCatId", currentItemsCategory)
                                     xmlWriter.WriteAttributeString("url", productCategoryImage)
                                     xmlWriter.WriteAttributeString("colour", productCategoryColour)
+                                Case XmlRequirementStruct.XML_EYECANDY
+                                    xmlWriter.WriteAttributeString("ProdCatId", currentItemsCategory)
 
 
                             End Select
@@ -637,7 +659,7 @@ Public Class cDatabaseManager
 
                             Case XmlRequirementStruct.XML_DEFAULT
 
-                                productData(productsTotal).productId = productList("ProdId")
+                                productData(productsTotal).productId = productList("ItemId")
                                 productData(productsTotal).productName = productList("name")
                                 productData(productsTotal).namePrefix = productList("preName")
                                 productData(productsTotal).displayPrice = productList("price")
@@ -756,6 +778,27 @@ Public Class cDatabaseManager
                                 productData(productsTotal).yPos = productList("yPos")
                                 productData(productsTotal).authourisationPrice = productData(productsTotal).displayPrice * 100
                                 productData(productsTotal).taxable = productList("Taxable")
+
+                            Case XmlRequirementStruct.XML_EYECANDY
+
+                                productData(productsTotal).productId = productList("ItemId")
+                                productData(productsTotal).polar = productList("Polarised")
+                                productData(productsTotal).brand = productList("Brand")
+                                productData(productsTotal).shape = productList("Shape")
+                                productData(productsTotal).gender = productList("Gender")
+                                productData(productsTotal).vto = productList("VTO")
+                                productData(productsTotal).namePrefix = productList("preName")
+                                productData(productsTotal).productName = productList("name")
+                                productData(productsTotal).displayPrice = productList("ProdPrice")
+                                productData(productsTotal).shortDescription = productList("desc")
+                                productData(productsTotal).style = productList("Style")
+                                productData(productsTotal).imageUrl1 = productList("url")
+                                productData(productsTotal).imageUrl2 = productList("url2")
+                                productData(productsTotal).imageUrl3 = productList("url3")
+                                productData(productsTotal).imageUrl4 = productList("url4")
+                                productData(productsTotal).categoryName = productList("ProdCatId")
+                                productData(productsTotal).xPos = productList("xPos")
+                                productData(productsTotal).yPos = productList("yPos")
 
                         End Select
 
@@ -915,6 +958,43 @@ Public Class cDatabaseManager
 
 
                                 xmlWriter.WriteElementString("desc", productData(productsTotal).shortDescription)
+                                xmlWriter.WriteElementString("url", productData(productsTotal).imageUrl1)
+                                xmlWriter.WriteElementString("url2", productData(productsTotal).imageUrl2)
+                                xmlWriter.WriteElementString("url3", productData(productsTotal).imageUrl3)
+                                xmlWriter.WriteElementString("url4", productData(productsTotal).imageUrl4)
+                                xmlWriter.WriteElementString("xPos", productData(productsTotal).xPos)
+                                xmlWriter.WriteElementString("yPos", productData(productsTotal).yPos)
+
+                            Case XmlRequirementStruct.XML_EYECANDY
+
+                                Dim priceDecimal As Decimal = productData(productsTotal).displayPrice
+                                Dim taxDecimal As Decimal = (productData(productsTotal).displayPrice * taxRate) / 10000
+                                Dim priceString As String = Format(priceDecimal - taxDecimal, currencySymbol & "#,##0.00")
+                                Dim taxString As String = Format(taxDecimal, currencySymbol & "#,##0.00")
+                                Dim totalString As String = Format(priceDecimal, currencySymbol & "#,##0.00")
+
+                                ' write the XML
+                                xmlWriter.WriteAttributeString("ProdId", productData(productsTotal).productId)
+                                xmlWriter.WriteElementString("polar", productData(productsTotal).polar)
+                                xmlWriter.WriteElementString("brand", productData(productsTotal).brand)
+                                xmlWriter.WriteElementString("shape", productData(productsTotal).shape)
+                                xmlWriter.WriteElementString("gender", productData(productsTotal).gender)
+                                xmlWriter.WriteElementString("vto", productData(productsTotal).vto)
+                                xmlWriter.WriteElementString("preName", productData(productsTotal).namePrefix)
+                                xmlWriter.WriteElementString("name", productData(productsTotal).productName)
+
+                                If taxRate = 0 Then
+                                    xmlWriter.WriteElementString("price", priceString)
+                                    xmlWriter.WriteElementString("taxPrice", "0.00")
+                                    xmlWriter.WriteElementString("fullPrice", productData(productsTotal).fullPrice)
+                                Else
+                                    xmlWriter.WriteElementString("price", priceString)
+                                    xmlWriter.WriteElementString("taxPrice", taxString)
+                                    xmlWriter.WriteElementString("fullPrice", totalString)
+                                End If
+
+                                xmlWriter.WriteElementString("desc", productData(productsTotal).shortDescription)
+                                xmlWriter.WriteElementString("style", productData(productsTotal).style)
                                 xmlWriter.WriteElementString("url", productData(productsTotal).imageUrl1)
                                 xmlWriter.WriteElementString("url2", productData(productsTotal).imageUrl2)
                                 xmlWriter.WriteElementString("url3", productData(productsTotal).imageUrl3)
