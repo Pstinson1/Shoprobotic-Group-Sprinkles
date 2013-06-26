@@ -781,7 +781,7 @@ Public Class cDatabaseManager
 
                             Case XmlRequirementStruct.XML_EYECANDY
 
-                                productData(productsTotal).productId = productList("ItemId")
+                                productData(productsTotal).productId = productList("ProdId")
                                 productData(productsTotal).polar = productList("Polarised")
                                 productData(productsTotal).brand = productList("Brand")
                                 productData(productsTotal).shape = productList("Shape")

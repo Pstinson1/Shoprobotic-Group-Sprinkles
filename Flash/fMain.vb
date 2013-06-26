@@ -23,6 +23,7 @@ Imports SettingsManager
 Imports VideoManager
 Imports YesPay
 Imports System.Net.NetworkInformation
+Imports VTO
 
 #End Region
 
@@ -54,6 +55,10 @@ Public Class fMain
     Private helperFunctionsFactory As cHelperFunctionsFactory = New cHelperFunctionsFactory
     Private accessPaymentManager As fAccessPayment
     Private accessPaymentManagerFactory As cAccessPaymentFactory = New cAccessPaymentFactory
+    Private VTO As fVTO
+    Private VTOFactory As cVTOFactory = New cVTOFactory
+    Private fVTO As fVTO = New fVTO
+
     '  Private dinkeyDongle As cDinkeyDongle = New cDinkeyDongle
 
     Private flashProxy As Flash.External.ExternalInterfaceProxy
@@ -184,9 +189,6 @@ Public Class fMain
         flashProxy = New Flash.External.ExternalInterfaceProxy(AxFlash)
         debugInformation.Progress(fDebugWindow.Level.INF, 1032, "Flash proxy created", True)
 
-
-
-
         'create an addhandler delegate for incoming flash app messages
         AddHandler flashProxy.ExternalFSCommandCall, AddressOf proxy_ExternalFSCommandCall
         debugInformation.Progress(fDebugWindow.Level.INF, 1033, "Flash handler set", True)
@@ -224,10 +226,23 @@ Public Class fMain
 
         End If
 
+
+
+
+
+
+        ' sort out the VTO
+
+        Dim xpos = settingsManager.GetValue("VtoPosX")
+        Dim ypos = settingsManager.GetValue("VtoPosY")
+        fVTO.Show()
+        fVTO.Location = New Point(xpos, ypos)
+        fVTO.SendToBack()
+
+
         ' lock mech/service menu
         mLockMech = New fLockMech
         mLockMech.Initialise()
-
 
         ' windowed or full screen ?
         If settingsManager.GetValue("RunWindowed") Then
@@ -665,6 +680,23 @@ Public Class fMain
                     LogContact(flashMessage(1))
                 End If
 
+
+
+
+            Case "vtoOn"
+
+                fVTO.BringToFront()
+                fVTO.RequestProduct(flashMessage(1))
+                fVTO.LoadProduct()
+
+
+
+            Case "vtoOff"
+
+                fVTO.SendToBack()
+                Me.BringToFront()
+
+
             Case Else
 
         End Select
@@ -796,6 +828,7 @@ Public Class fMain
                         videoManager.ShowView(fVideoManager.CameraListItem.PICK_HEAD_VIEW, False)
 
                     End If
+
 
                 Case ApplicationStatus.TransferData
 
@@ -1810,6 +1843,8 @@ Public Class fMain
         End Select
 
         mHook.UnhookKeyboard()
+
+        fVTO.Dispose()
 
         End
 

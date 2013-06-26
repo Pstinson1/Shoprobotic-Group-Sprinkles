@@ -22,7 +22,8 @@
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <ApplicationIcon>ShopRobotic.ico</ApplicationIcon>
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
     <PublishUrl>http://localhost/Vend/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -37,7 +38,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -236,6 +236,10 @@
     <ProjectReference Include="..\VideoManager\VideoManager.vbproj">
       <Project>{D8DF68AB-33FF-4597-B3C9-B0D025382490}</Project>
       <Name>VideoManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VTO\VTO.vbproj">
+      <Project>{A8912019-46DC-4EBD-9800-BD728531FD08}</Project>
+      <Name>VTO</Name>
     </ProjectReference>
     <ProjectReference Include="..\YesPay\YesPay.vbproj">
       <Project>{682E8701-4D2E-435F-A7A0-C67784AD7D29}</Project>
