@@ -238,6 +238,8 @@ Public Class fMain
         fVTO.Show()
         fVTO.Location = New Point(xpos, ypos)
         fVTO.SendToBack()
+        fVTO.TopMost = False
+        Me.TopMost = True
 
 
         ' lock mech/service menu
@@ -688,6 +690,9 @@ Public Class fMain
                 fVTO.BringToFront()
                 fVTO.RequestProduct(flashMessage(1))
                 fVTO.LoadProduct()
+                Me.TopMost = False
+                fVTO.TopMost = True
+
 
 
 
@@ -695,6 +700,9 @@ Public Class fMain
 
                 fVTO.SendToBack()
                 Me.BringToFront()
+                fVTO.TopMost = False
+                Me.TopMost = True
+
 
 
             Case Else
